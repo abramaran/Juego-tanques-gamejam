@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ClickAPunto : MonoBehaviour {
     public GameObject cilindro;
+    public GameObject explosion;
+
     Camera camara;
     Vector3 ajuste = new Vector3(32, 20, 0);
     Vector3 offset = new Vector3(16, 10, 0);
@@ -34,6 +36,8 @@ public class ClickAPunto : MonoBehaviour {
         cilindro.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1.5f);
         cilindro.transform.position = puntoEnMapa;
+        explosion.transform.position = puntoEnMapa;
+        explosion.GetComponent<ParticleSystem>().Play();
         print(puntoEnMapa);
         yield return null;
         cilindro.transform.position = new Vector3(100, 100, 100);
