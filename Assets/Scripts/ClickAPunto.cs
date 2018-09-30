@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClickAPunto : MonoBehaviour {
     public GameObject cilindro;
     public GameObject explosion;
+    public caerLapiz lapiz;
 
     Camera camara;
     Vector3 ajuste = new Vector3(32, 20, 0);
@@ -34,14 +35,20 @@ public class ClickAPunto : MonoBehaviour {
         puntoEnMapa.z = auxY;
         puntoEnMapa *= -1;  //Porque por algún motivo salia invertido
         cilindro.GetComponent<AudioSource>().Play();
+        lapiz.caer(puntoEnMapa);
+
         yield return new WaitForSeconds(1.5f);
+
         cilindro.transform.position = puntoEnMapa;
         explosion.transform.position = puntoEnMapa;
         explosion.GetComponent<ParticleSystem>().Play();
         print(puntoEnMapa);
+
         yield return null;
+
         cilindro.transform.position = new Vector3(100, 100, 100);
         semaforoMisil = true;
+
         yield return null;
     }
 }
