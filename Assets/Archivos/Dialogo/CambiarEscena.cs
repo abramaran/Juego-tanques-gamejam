@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class CambiarEscena : MonoBehaviour {
 
-	
-	// Update is called once per frame
-	void Update () {
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Application.LoadLevel("Pruebas programacion");
-        }
-        
-
+    // Update is called once per frame
+    public void cambiar() {
+        Application.LoadLevel("Pruebas programacion");
     }
 }
