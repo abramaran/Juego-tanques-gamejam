@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CambiarNivel2 : MonoBehaviour {
-
-	// Use this for initialization
 	void Start () {
-		
+        StartCoroutine(cambiarTrasTiempo());
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    IEnumerator cambiarTrasTiempo() {
+        print("contando...");
+        yield return new WaitForSeconds(55);
+        SceneManager.LoadScene("Nivel 2");
+    }
 }
