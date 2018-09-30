@@ -31,6 +31,7 @@ public class ClickAPunto : MonoBehaviour {
         puntoEnMapa.y = puntoEnMapa.z;
         puntoEnMapa.z = auxY;
         puntoEnMapa *= -1;  //Porque por algún motivo salia invertido
+        cilindro.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1.5f);
         cilindro.transform.position = puntoEnMapa;
         print(puntoEnMapa);
