@@ -6,6 +6,11 @@ public class recibirDanyo : MonoBehaviour {
 
     public int vida = 100;
     public ParticleSystem humo;
+    public contarEnemigos contador;
+
+    private void Start() {
+        contador.cuenta++;
+    }
 
     void OnTriggerEnter(Collider other) {
         Vector3 impacto;
@@ -26,6 +31,9 @@ public class recibirDanyo : MonoBehaviour {
             humo.Play();
         }
 
-        if (vida <= 0) Destroy(this.gameObject);
+        if (vida <= 0) {
+            contador.cuenta--;
+            Destroy(this.gameObject);
+        }
     }
 }

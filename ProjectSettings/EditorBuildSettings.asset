@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pruebas programacion.unity
     guid: a56ec0910ce8c024ba3881351f7b1fec
+  - enabled: 1
+    path: Assets/Scenes/Menugirando.unity
+    guid: e6737feb15b47b54cb02acab1cb779cd
   m_configObjects: {}
