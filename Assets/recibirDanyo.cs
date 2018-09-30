@@ -5,6 +5,7 @@ using UnityEngine;
 public class recibirDanyo : MonoBehaviour {
 
     public int vida = 100;
+    public ParticleSystem humo;
 
     void OnTriggerEnter(Collider other) {
         Vector3 impacto;
@@ -22,6 +23,7 @@ public class recibirDanyo : MonoBehaviour {
         } else {
             vida -= (int)(diametro / 2 - resta);
             print("vida: " + vida);
+            humo.Play();
         }
 
         if (vida <= 0) Destroy(this.gameObject);
