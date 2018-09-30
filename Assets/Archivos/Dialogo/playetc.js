@@ -4,7 +4,7 @@
 
 public function BotonJugar(){
 
-Application.LoadLevel("slenderpartepri");
+Application.LoadLevel("nivel1");
 //SceneManager.LoadScene("play");
 }
 public function BotonSalir(){

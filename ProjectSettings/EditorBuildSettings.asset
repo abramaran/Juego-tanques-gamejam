@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Pruebas programacion.unity
     guid: a56ec0910ce8c024ba3881351f7b1fec
   - enabled: 1
-    path: Assets/Scenes/Menugirando.unity
-    guid: e6737feb15b47b54cb02acab1cb779cd
+    path: Assets/Scenes/dialogo.unity
+    guid: d7f223f581232f44693701c0af10ac07
+  - enabled: 0
+    path: Assets/Scenes/Escena mesa.unity
+    guid: 4ffb3499f6b00fe4cb1929b9aa43a090
   m_configObjects: {}
